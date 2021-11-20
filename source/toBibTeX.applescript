@@ -100,7 +100,7 @@ on run argv
 	tell application "Finder" to if exists cpPath as POSIX file then set isCiteproc to true
 	
 	-- parse input
-	set homePath to POSIX path of (path to home folder)
+	set homePath to POSIX path of "/"
 	if (count of argv) > 1 then
 		set myPath to POSIX path of homePath & (item 1 of argv)
 		set theGroups to items 2 thru -1 of argv
